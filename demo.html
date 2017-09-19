@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高分喷雾</title>
+    <script>
+        function setmusic(adress) {
+            var obgm=document.getElementById('bgm');
+            obgm.src=adress;
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url(images/bg.jpg) no-repeat;
+            background-size:cover;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 70px;
+            right: 145px;
+            transform-style: preserve-3d;
+            animation: sport 30s linear 0s infinite normal;
+
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        ul li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity: 0.5;
+        }
+        ul li:hover img{
+            opacity: 1;
+        }
+        @keyframes sport {
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/Yellow.JPG" title="Yellow" onclick="setmusic('audio/Coldplay%20-%20Yellow.mp3')"></li>
+    <li><img src="images/Paradise.JPG" title="Paradise" onclick="setmusic('audio/Coldplay%20-%20Paradise.mp3')"></li>
+    <li><img src="images/A%20Sky%20Full%20of%20Stars.JPG" title="A Sky Full of Stars" onclick="setmusic('audio/Coldplay%20-%20A%20Sky%20Full%20of%20Stars.mp3')"></li>
+    <li><img src="images/Viva%20La%20Vida.JPG" title="Viva La Vida"
+    onclick="setmusic('audio/Coldplay%20-%20Viva%20La%20Vida.mp3')"></li>
+    <li><img src="images/Hymn%20For%20The%20Weekend.JPG" title="Hymn For The Weekend" onclick="setmusic('audio/Alan%20Walker,Coldplay%20-%20Hymn%20For%20The%20Weekend%20%5BRemix%5D.mp3')"></li>
+    <li id="S"><img src="images/Something%20Just%20Like%20This.JPG" title="Something Just Like This" onclick="setmusic('audio/The%20Chainsmokers,Coldplay%20-%20Something%20Just%20Like%20This.mp3')"></li>
+</ul>
+<audio src="audio/Coldplay%20-%20Yellow.mp3" autoplay="autoplay" loop="loop" controls="controls" id="bgm"></audio>
+</body>
+</html>
